@@ -1,0 +1,95 @@
+.ItemsContainer-content {
+  padding: 0 16px 90px 16px;
+}
+
+h3 {
+  margin-top: 16px;
+}
+
+.ItemsContainer-empty {
+  color: #555;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.ItemsContainer-todo,
+.ItemsContainer-done {
+  padding-bottom: 8px;
+}
+
+.ItemsContainer-todo {
+  font-weight: 500;
+  color: #0984e3;
+}
+
+.ItemsContainer-done {
+  color: #555;
+}
+
+.ItemsContainer-todo .ItemsContainer-remove {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: red;
+  margin-left: 16px;
+}
+
+.ItemsContainer-todo:hover .ItemsContainer-remove {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.ItemsContainer-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.ItemsContainer-tooltip .ItemsContainer-tooltiptext {
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ItemsContainer-tooltip .ItemsContainer-tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.ItemsContainer-tooltip:hover .ItemsContainer-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ItemsContainer-add {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  border-top: 2px solid #dedede;
+  background-color: #f3f3f3;
+}
+
+.ItemsContainer-add input:not([type="submit"]) {
+  width: 60%;
+}

@@ -1,0 +1,42 @@
+.ProjectContainer-card {
+  margin: 0 16px 16px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  position: relative;
+  flex: 1 0 320px;
+  box-sizing: border-box;
+}
+
+.ProjectContainer-card-header {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0984e3;
+  color: white;
+  font-weight: bold;
+  padding: 0 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ProjectContainer-actions svg:first-child {
+  margin-right: 16px;
+}
+
+.ProjectContainer-actions span {
+  cursor: pointer;
+}
+
+.ProjectContainer-edit form {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.ProjectContainer-edit input {
+  background-color: unset;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  color: white;
+}
