@@ -52,6 +52,7 @@ form.primary input {
   width: 100%;
   padding: 0 16px;
   border-radius: 8px;
+  margin: 16px 0;
 }
 
 form.primary input:focus:not(input[type="submit"]) {

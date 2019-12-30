@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import './Home.css';
 import UserService from '../../services/UserService';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 import ProjectService from '../../services/ProjectService';
 import ProjectModel from '../../models/ProjectModel';
 import ProjectContainer from './../project-container/ProjectContainer';
@@ -77,7 +81,15 @@ class Home extends Component {
       <Fragment>
         <div className="Home-header">
           <b>EDirectInsure TODO List</b>
-          {UserService.getCurrentUser().name}
+          <div>
+            {UserService.getCurrentUser().name}
+            <Link to="/sign-in">
+              <FontAwesomeIcon
+                icon={faSignOutAlt}
+                size="lg"
+                onClick={() => UserService.clearCredentials()} />
+            </Link>
+          </div>
         </div>
 
         <div className="Home-add-project">

@@ -38,6 +38,10 @@ class UserService {
     const credentialsStr = localStorage.getItem('credentials');
     return JSON.parse(credentialsStr);
   }
+
+  static clearCredentials() {
+    localStorage.clear();
+  }
 }
 
 export default UserService;

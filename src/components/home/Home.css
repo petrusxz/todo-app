@@ -8,6 +8,15 @@
   padding: 0 16px;
 }
 
+.Home-header svg {
+  padding-left: 16px;
+}
+
+.Home-header a {
+  color: white;
+  padding: 0;
+}
+
 .Home-add-project {
   text-align: center;
   padding: 16px;
